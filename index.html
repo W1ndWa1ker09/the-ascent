@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang = "en-us">
+
+<head>
+	<meta charset = "UTF-8">
+	<meta name = "viewport" content = "width = device-width, initial-scale = 1">
+	<title> The Ascent </title>
+	<link rel = "stylesheet" href = "mainmenu.css">
+	<link rel = "stylesheet" href = "play.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Caveat:wght@400..700&family=Jo
+		  lly+Lodger&family=Reenie+Beanie&family=Rock+Salt&family=Winky+S
+		  ans:ital,wght@0,300..900;1,300..900&family=Zeyada&display=swap" 
+		  rel="stylesheet">
+</head>
+<body>
+	<div class="background">
+		<div class="bar left"></div>
+		<div class="bar right"></div>
+	</div>
+
+    <div class="signs_container default" id="title">
+        <div class="sign_wrapper">
+            <div class="sign"> The Ascent </div>
+        </div>
+        <div class="sign_wrapper">
+            <button class="sign disabled" id="continue"> Continue </button>
+        </div>
+        <div class="sign_wrapper">
+            <button class="sign" id="new_game"> New Game </button>
+        </div>
+        <div class="sign_wrapper">
+            <button class="sign disabled" id="load"> Load Game </button>
+        </div>
+        <div class="sign_wrapper">
+            <button class="sign" id="settings"> Settings </button>
+        </div>
+    </div>
+    <div class="signs_container" id="settings">
+		<div class="sign_wrapper">
+			<div class="sign"> Settings </div>
+		</div>
+		<div class="sign_wrapper">
+			<div class="sign content">
+				Text Speed: <input type="range" id="text_speed_slider"> <span id="text_speed"> 5 </span>
+			</div>
+		</div>
+		<div class="sign_wrapper">
+			<div class="sign content">
+				Auto Pickup: <button class="toggle off" id="auto_pickup"> DISABLED </button>
+			</div>
+		</div>
+		<div class="sign_wrapper">
+			<button class="sign" id="title"> Main Menu </button>
+		</div>
+    </div>
+	<div class="signs_container" id="load">
+		<div class="sign_wrapper">
+			<div class="sign"> Load Game </div>
+		</div>
+		<div class="sign_wrapper">
+			<button class="sign" id="play"> Load Save 1 "My Game 1" </button>
+		</div>
+		<div class="sign_wrapper">
+			<button class="sign" id="title"> Main Menu </button>
+		</div>
+    </div>
+
+	<div class="play">
+		<div class="vert_area">
+			<div class="horiz_area">
+				<div class="info left">
+					Sanity: <span class="insanity Healthy" id="insanity">Healthy</span> <br><br>
+					Inventory:<br><span class="inventory">Empty</span>
+				</div>
+				<canvas class="map"></canvas>
+				<div class="info right">
+					<div class="progress_bar">
+						<div class="progress_bar_filler stage1" id="flashlight">
+							Flashlight
+						</div>
+					</div>
+					<div class="progress_bar">
+						<div class="progress_bar_filler stage1" id="medication">
+							Medication
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="console"></div>
+		</div>
+	</div>
+
+	<div class="signs_container" id="location">
+		<div class="sign_wrapper">
+			<div class="sign content" id="location_sign"> Elevator </div>
+		</div>
+		<div class="sign_wrapper">
+			<button class="sign" id="enter"> Enter </button>
+		</div>
+	</div>
+
+	<div class="listeners"></div>
+
+	<audio id="suspense_bgm" src="Sounds/mixkit-dark-cinematic-room-tone-3081.wav" loop></audio>
+	<audio id="heartbeat_loop" src="Sounds/mixkit-human-single-heart-beat-490.wav" loop></audio>
+	<audio id="entity_appearance" src="Sounds/mixkit-cinematic-horror-trailer-long-sweep-561.wav"></audio>
+	<audio id="caught_by_entity" src="Sounds/mixkit-horror-swish-1495.wav"></audio>
+	<audio id="elevator_arrived" src="Sounds/mixkit-elevator-announcement-bells-112.wav"></audio>
+	<audio id="game_start" src="Sounds/mixkit-cinematic-whoosh-deep-impact-1143.mp3"></audio>
+
+	<script src="JavaScript/generation.js"></script>
+	<script src="JavaScript/items.js"></script>
+	<script src="JavaScript/console.js"></script>
+	<script src="JavaScript/map.js"></script>
+    <script src="JavaScript/mainmenu.js"></script>
+	<script src="JavaScript/play.js"></script>
+</body>
+</html>
